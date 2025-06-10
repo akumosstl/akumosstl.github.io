@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AkumosSTL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" type="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            scroll-behavior: smooth;
+        }
+
+        .navbar-brand {
+            font-weight: 300;
+            color: #f6f9f9;
+        }
+
+        .carousel-caption {
+            left: 5%;
+            right: auto;
+            text-align: left;
+            color: aliceblue;
+            background: #1b1b6f;
+            padding: 20px;
+            border-radius: 10px;
+            padding-top: 10px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h2 {
+            font-weight: 700;
+            color: #45331c;
+        }
+
+        .table th,
+        .table td {
+            vertical-align: middle;
+        }
+
+        .tool-card {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .tool-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        footer a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top Menu -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #45331c;">
+        <div class="container">
+            <a class="navbar-brand" href="#">AkumosSTL</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" style="color: aliceblue;" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#tools" style="color: aliceblue;">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" style="color: aliceblue;">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Java Swing Monitoring Service Section -->
+    <section id="swing" class="container">
+        <br><br>
+        <h2 class="mb-4">AI Swing Monitoring</h2>
+        <p>
+            A Java Agent for monitoring and automating user interactions on any Java Swing application.
+        </p>
+        <p>
+            <br>
+
+            ✅ Capture user interactions like clicks, text input, JTable selections, dropdown selections, and more.<br>
+            ✅ Supports components inside nested JFrame, JDialog, and dynamic UI elements.<br>
+            ✅ REST endpoints to start/stop recording and to automate playback.<br>
+            ✅ Persistence in JSON file system.<br>
+            ✅ Can be attached to any Java Swing application as a Java Agent.<br>
+
+        </p>
+        <p>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/DSAu5tNz7pE" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        </p>
+
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container">
+        <h2 class="mb-4">Services</h2>
+        <p>Check which version fit to you: community, premium or whether you rather or need we
+            could delivery a customized version.
+            We also help clients with custom software development and AI solutions.</p>
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table-primary">
+                    <th>Feature</th>
+                    <th>Community Version</th>
+                    <th>Premium Version</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Java Swing Monitoring</td>
+                    <td>Open source on GitHub</td>
+                    <td>A Java Agent for monitoring and automating user interactions on any Java Swing application.
+                        Extended automation, support.</td>
+                </tr>
+                <tr>
+                    <td>AkumosAI</td>
+                    <td>Open source on GitHub</td>
+                    <td>Prompt engineering assistant engine.
+                        Enhanced templates, integrations.</td>
+                </tr>
+                <tr>
+                    <td>LLM Gateway</td>
+                    <td>Open source on GitHub</td>
+                    <td>Scalability, support, analytics.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="container">
+
+        <h2 class="mb-4">Tools</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="tool-card">
+                    <h5>Java Swing Monitoring</h5>
+                    <p>A Java Agent to monitor Swing apps.</p>
+                    <a href="https://github.com/akumosstl/java_swing_monitoring" target="_blank"
+                        class="btn btn-outline-primary">GitHub</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tool-card">
+                    <h5>AkumosAI</h5>
+                    <p>Prompt engineering assistant engine.</p>
+                    <a href="https://github.com/akumosstl/akumosstl-platform" class="btn btn-outline-primary">GitHub</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tool-card">
+                    <h5>LLM Gateway</h5>
+                    <p>Gateway to manage LLM backends.</p>
+                    <a href="#" class="btn btn-outline-primary">comming soon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2 class="mb-4">Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:alissonmagnusson@gmail.com">alissonmagnusson@gmail.com</a></p>
+        <p><strong>Phone:</strong>
+            <a class="btn-whatsapp" href="https://wa.me/5535997731413" target="_blank">
+                <i class="fab fa-whatsapp" style="font-size: 20px;"></i> +55 (35) 99773-1413
+            </a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <a class="btn-whatsapp" href="https://wa.me/5535997731413" target="_blank">
+            <i class="fab fa-whatsapp" style="font-size: 30px;"></i> click here (whatsapp)
+        </a>
+        <br>
+        <p>Contact: <a href="mailto:alissonmagnusson@gmail.com" class="text-white">alissonmagnusson@gmail.com</a> | <i
+                class="fab fa-whatsapp"></i> +55 (35) 99773-1413</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
