@@ -535,6 +535,8 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   box-shadow: 0 6px 20px rgba(0,0,0,0.35);
   cursor: pointer;
+  /* subtle pulse to draw attention */
+  animation: pulse 1.8s ease-in-out infinite;
 }
 .video-play-overlay:focus {
   outline: none;
@@ -561,12 +563,32 @@ h1, h2, h3, h4, h5, h6 {
   .video-play-overlay {
     width: 64px;
     height: 64px;
+    animation-duration: 1.6s;
   }
   .video-play-overlay::before {
     border-left: 16px solid #fff;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     margin-left: 3px;
+  }
+}
+
+/* Pulse keyframes */
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+  }
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .video-play-overlay {
+    animation: none;
   }
 }
 
