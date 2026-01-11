@@ -252,6 +252,59 @@
       once: true,
       mirror: false
     });
-  });
+    /* Video placeholder lazy loader: replace placeholder with iframe on click or keyboard (enter/space) */
+    const videoPlaceholders = select('.video-placeholder', true);
+    if (videoPlaceholders && videoPlaceholders.length) {
+      videoPlaceholders.forEach(placeholder => {
+        const loadIframe = () => {
+          const id = placeholder.dataset.videoId;
+          const container = placeholder.closest('.video-container');
+          if (!id || !container) return;
+          const iframe = document.createElement('iframe');
+
+          // Only include origin when we have a valid http(s) origin (not file:// or null)
+          let originParam = '';
+          try {
+            const locOrigin = window.location.origin;
+            if (locOrigin && !locOrigin.startsWith('file') && locOrigin !== 'null') {
+              originParam = `&origin=${encodeURIComponent(locOrigin)}`;
+            }
+          } catch (e) { originParam = ''; }
+
+          iframe.setAttribute('src', `https://www.youtube-nocookie.com/embed/${id}?rel=0&modestbranding=1&autoplay=1${originParam}`);
+          iframe.setAttribute('title', 'YouTube video player');
+          iframe.setAttribute('frameborder', '0');
+          iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+          iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.setAttribute('loading', 'lazy');
+
+          // If embed fails to load (YouTube Error 153), fallback: open YouTube in new tab and show fallback message
+          const fallbackUrl = `https://www.youtube.com/watch?v=${id}`;
+          let loaded = false;
+          const loadTimeout = setTimeout(() => {
+            if (!loaded) {
+              // Open fallback in new tab and show fallback message inline
+              window.open(fallbackUrl, '_blank', 'noopener');
+              container.innerHTML = `<p class="video-fallback">Video could not be embedded — <a href="${fallbackUrl}" target="_blank" rel="noopener">open on YouTube</a>.</p>`;
+            }
+          }, 3500);
+
+          iframe.addEventListener('load', () => {
+            loaded = true;
+            clearTimeout(loadTimeout);
+          });
+
+          // Replace contents of container with iframe
+          container.innerHTML = '';
+          container.appendChild(iframe);
+        };
+
+        placeholder.addEventListener('click', () => loadIframe());
+        placeholder.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); loadIframe(); }
+        });
+      });
+    }  });
 
 })()
