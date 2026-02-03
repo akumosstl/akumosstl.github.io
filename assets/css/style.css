@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo a {
-  color: #fff;
+  color: #271f39;
 }
 
 #header .logo img {
@@ -167,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 0 10px 30px;
   font-size: 15px;
   font-weight: 500;
-  color: #fff;
+  color: #ffe082; /* Soft yellow for better contrast */
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -179,22 +179,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #47b2e4;
+  color: #ffd54f; /* Brighter yellow on hover/active */
 }
 
 .navbar .getstarted {
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 50px;
-  color: #fff;
+  color: #212121; /* Dark text for button for contrast */
   font-size: 14px;
   border: 2px solid #47b2e4;
   font-weight: 600;
 }
 
 .navbar .getstarted:hover {
-  color: #fff;
-  background: #31a9e1;
+  color: #212121;
+  background: #ffd54f;
 }
 
 .navbar .dropdown ul {
