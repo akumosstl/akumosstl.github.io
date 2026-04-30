@@ -7,6 +7,22 @@
       "documentationUrl": "https://github.com/akumosstl/agentic-ai-suite/blob/main/tools/nvidia/README.md",
       "downloadUrl": "https://github.com/akumosstl/agentic-ai-suite/tree/main/tools/nvidia",
       "description": "NVIDIA AI Chat is a command-line tool that lets you chat with advanced AI models through NVIDIA's API. Simply type your question and get an intelligent response powered by GLM models."
+    },
+    {
+      "name": "rag-local",
+      "version": "1.0.0",
+      "namespace": "akumosstl.github.io",
+      "documentationUrl": "https://github.com/akumosstl/agentic-ai-suite/blob/main/tools/rag/README.md",
+      "downloadUrl": "https://github.com/akumosstl/agentic-ai-suite/tree/main/tools/rag",
+      "description": "Simple RAG (Retrieval-Augmented Generation) system using Node.js, LanceDB, NVIDIA embeddings, and MCP for OpenCode integration."
+    },
+    {
+      "name": "sql-runner",
+      "version": "1.0.0",
+      "namespace": "akumosstl.github.io",
+      "documentationUrl": "https://github.com/akumosstl/agentic-ai-suite/blob/main/tools/sql-runner/README.md",
+      "downloadUrl": "https://github.com/akumosstl/agentic-ai-suite/tree/main/tools/sql-runner",
+      "description": "MCP server that connects to SQL databases and executes queries from natural language prompts via OpenCode CLI."
     }
   ]
 }
