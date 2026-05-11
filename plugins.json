@@ -31,6 +31,14 @@
       "documentationUrl": "https://github.com/akumosstl/cerrado-flow",
       "downloadUrl": "https://github.com/akumosstl/cerrado-flow",
       "description": "Cerrado Flow is a workflow/setup/framework that allows you to define and execute complex workflows using main patterns found in harness engineering."
+    },
+    {
+      "name": "agentic-playwright",
+      "version": "1.0.0",
+      "namespace": "akumosstl.github.io",
+      "documentationUrl": "https://github.com/akumosstl/agentic-playwright",
+      "downloadUrl": "https://github.com/akumosstl/agentic-playwright",
+      "description": "MCP (Model Context Protocol) server that uses Playwright for browser automation and data extraction. Enables LLMs to navigate websites, interact with elements, take screenshots, extract content as Markdown, and manage authentication sessions."
     }
   ]
 }
