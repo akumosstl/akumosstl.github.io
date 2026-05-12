@@ -2,6 +2,7 @@
   "plugins": [
     {
       "name": "nvidia-prompt",
+      "type" : "cli",
       "version": "1.0.0",
       "namespace": "akumosstl.github.io",
       "documentationUrl": "https://github.com/akumosstl/agentic-ai-suite/blob/main/tools/nvidia/README.md",
@@ -10,6 +11,7 @@
     },
     {
       "name": "rag-local",
+      "type" : "mcp",
       "version": "1.0.0",
       "namespace": "akumosstl.github.io",
       "documentationUrl": "https://github.com/akumosstl/agentic-rag",
@@ -18,6 +20,7 @@
     },
     {
       "name": "sql-runner",
+      "type" : "mcp",
       "version": "1.0.0",
       "namespace": "akumosstl.github.io",
       "documentationUrl": "https://github.com/akumosstl/agentic-sqlrunner",
@@ -26,6 +29,7 @@
     },
     {
       "name": "cerrado-flow",
+      "type" : "flow",
       "version": "1.0.0",
       "namespace": "akumosstl.github.io",
       "documentationUrl": "https://github.com/akumosstl/cerrado-flow",
@@ -34,6 +38,7 @@
     },
     {
       "name": "agentic-playwright",
+      "type" : "mcp",
       "version": "1.0.0",
       "namespace": "akumosstl.github.io",
       "documentationUrl": "https://github.com/akumosstl/agentic-playwright",
